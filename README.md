@@ -2,6 +2,8 @@
 ## directory and files
 /your_directory
 
+├ apps (empty directory)
+
 ├ Dockerfile
 
 ├ docker-compose.yaml

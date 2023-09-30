@@ -8,11 +8,11 @@ services:
     ports:
       - "3306:3306"
     volumes:
-      - ./tmp/db:/var/lib/mysql
+      - mysql_data:/var/lib/mysql
   web:
     build: .
     volumes:
-      - ./:/myapp
+      - ./apps:/apps
     ports:
       - "3000:3000"
     tty: true
@@ -20,3 +20,7 @@ services:
     depends_on:
       - db
     command: bash -c "rm -f tmp/pids/server.pid && bin/dev"
+
+volumes:
+    mysql_data:
+      driver: local

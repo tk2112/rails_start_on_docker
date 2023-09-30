@@ -4,18 +4,17 @@ FROM ruby:3.1.3
 # aptアップデート
 RUN apt update
 
-RUN mkdir /myapp
-WORKDIR /myapp
+RUN mkdir /apps
+WORKDIR /apps
 
-COPY Gemfile /myapp/Gemfile
-COPY Gemfile.lock /myapp/Gemfile.lock
+COPY apps/Gemfile /apps/Gemfile
+COPY apps/Gemfile.lock /apps/Gemfile.lock
 
 # Bundlerの不具合対策
 RUN gem update --system
 RUN bundle update --bundler
 
 RUN bundle install
-COPY . /myapp
 
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh && \
