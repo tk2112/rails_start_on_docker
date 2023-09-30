@@ -16,7 +16,7 @@
 # Making Rails Project
 To copy the files `Gemfile` and `Gemfile.lock` into the `apps` directory.
 ## Using Tailwind CSS and Database is MySQL
-On teminal
+On terminal
 ```
 docker-compose run web rails new . --css tailwind --force --no-deps --database=mysql
 ```
@@ -55,17 +55,17 @@ default: &default
   host: db
 ```
 # Docker Compose bulid
-On teminal
+On terminal
 ```
 docker-compose build
 ```
 # Meke Rails database
-On teminal
+On terminal
 ```
 docker-compose run web rails db:create
 ```
 # Start Docker Compose image (Finish)
-On teminal
+On terminal
 ```
 docker-compose up
 ```
