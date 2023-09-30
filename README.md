@@ -13,7 +13,8 @@
 ├ Gemfile
 
 └ Gemfile.lock
-## Making Rails Project on Docker
+## Making Rails Project on 
+To copy the files `Gemfile` and `Gemfile.lock` into the `apps` directory.
 ### Using Tailwind CSS and Database is MySQL
 On teminal
 ```
